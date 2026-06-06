@@ -238,9 +238,12 @@ class MainActivity : AppCompatActivity() {
                     binding.ivSignature.setImageBitmap(result.signature)
                     binding.cardSignature.visibility = View.VISIBLE
                     binding.tvSuccessStatus.text = "Foto & Tanda Tangan Berhasil Dimuat"
+                    binding.tvSuccessStatus.setTextColor(ContextCompat.getColor(this, R.color.success))
                 } else {
                     binding.cardSignature.visibility = View.GONE
-                    binding.tvSuccessStatus.text = getString(R.string.photo_loaded)
+                    val status = result.signatureStatus ?: "Tidak tersedia"
+                    binding.tvSuccessStatus.text = "Foto Berhasil. Tanda Tangan: $status"
+                    binding.tvSuccessStatus.setTextColor(ContextCompat.getColor(this, R.color.text_secondary))
                 }
 
                 vibrateDeviceSuccess()

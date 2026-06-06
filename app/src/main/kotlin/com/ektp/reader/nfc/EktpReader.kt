@@ -10,7 +10,11 @@ import java.io.IOException
 class EktpReader {
 
     sealed class ReadResult {
-        data class Success(val photo: Bitmap, val signature: Bitmap? = null) : ReadResult()
+        data class Success(
+            val photo: Bitmap,
+            val signature: Bitmap? = null,
+            val signatureStatus: String? = null
+        ) : ReadResult()
         data class Error(val message: String) : ReadResult()
         object Reading : ReadResult()
     }
@@ -101,8 +105,25 @@ class EktpReader {
 
             // 4. Try to read Signature (Optional)
             var signatureBitmap: Bitmap? = null
+            var signatureStatus: String? = "Tidak ditemukan"
+            
             try {
-                val selectSigResponse = isoDep.transceive(ApduUtils.SELECT_EF_SIGNATURE)
+                android.util.Log.d("EktpReader", "Attempting to select Signature EF (6F F3)")
+                var selectSigResponse = isoDep.transceive(ApduUtils.SELECT_EF_SIGNATURE)
+                var sw = if (selectSigResponse.size >= 2) {
+                    String.format("%02X%02X", selectSigResponse[selectSigResponse.size - 2], selectSigResponse[selectSigResponse.size - 1])
+                } else "Unknown"
+                
+                // If 6F F3 fails with 6A 82 (File Not Found), try 6F 04 as fallback
+                if (sw == "6A82") {
+                    android.util.Log.d("EktpReader", "6F F3 not found, trying 6F 04")
+                    val SELECT_EF_SIG_ALT = byteArrayOf(0x00.toByte(), 0xA4.toByte(), 0x00.toByte(), 0x00.toByte(), 0x02.toByte(), 0x6F.toByte(), 0x04.toByte())
+                    selectSigResponse = isoDep.transceive(SELECT_EF_SIG_ALT)
+                    sw = if (selectSigResponse.size >= 2) {
+                        String.format("%02X%02X", selectSigResponse[selectSigResponse.size - 2], selectSigResponse[selectSigResponse.size - 1])
+                    } else "Unknown"
+                }
+
                 if (ApduUtils.isSuccessResponse(selectSigResponse)) {
                     val sigSizeCommand = ApduUtils.buildReadBinaryCommand(0, 8)
                     val sigSizeResponse = isoDep.transceive(sigSizeCommand)
@@ -113,7 +134,7 @@ class EktpReader {
                             val sigBytes = ByteArray(sigSize)
                             val initialSigLen = sigSizeResponse.size - 4
                             if (initialSigLen > 0) {
-                                System.arraycopy(sigSizeResponse, 2, sigBytes, 0, initialSigLen)
+                                System.arraycopy(sigSizeResponse, 2, sigBytes, 0, Math.min(initialSigLen, sigSize))
                             }
 
                             var sigOffset = 8
@@ -123,19 +144,29 @@ class EktpReader {
                                 val cmd = ApduUtils.buildReadBinaryCommand(sigOffset, len)
                                 val resp = isoDep.transceive(cmd)
                                 if (!ApduUtils.isSuccessResponse(resp)) break
-                                System.arraycopy(resp, 0, sigBytes, sigOffset - 2, resp.size - 2)
+                                System.arraycopy(resp, 0, sigBytes, sigOffset - 2, Math.min(resp.size - 2, sigSize - (sigOffset - 2)))
                                 sigOffset = nextOffset
                             }
                             signatureBitmap = BitmapFactory.decodeByteArray(sigBytes, 0, sigBytes.size)
+                            signatureStatus = if (signatureBitmap != null) "Berhasil" else "Gagal decode"
+                        } else {
+                            signatureStatus = "Ukuran 0"
                         }
+                    } else {
+                        signatureStatus = "Gagal baca ukuran"
+                    }
+                } else {
+                    signatureStatus = when (sw) {
+                        "6982" -> "Akses Ditolak (Locked)"
+                        "6A82" -> "File Tidak Ada"
+                        else -> "Status: $sw"
                     }
                 }
             } catch (e: Exception) {
-                // If signature fails, we still return the photo
-                e.printStackTrace()
+                signatureStatus = "Error: ${e.message}"
             }
 
-            ReadResult.Success(photoBitmap, signatureBitmap)
+            ReadResult.Success(photoBitmap, signatureBitmap, signatureStatus)
 
         } catch (e: IOException) {
             ReadResult.Error("Koneksi NFC terputus: ${e.localizedMessage}")
