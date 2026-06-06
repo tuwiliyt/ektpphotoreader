@@ -242,7 +242,12 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     binding.cardSignature.visibility = View.GONE
                     val status = result.signatureStatus ?: "Tidak tersedia"
-                    binding.tvSuccessStatus.text = "Foto Berhasil. Tanda Tangan: $status"
+                    
+                    if (status.contains("Terkunci") || status.contains("Enkripsi")) {
+                        binding.tvSuccessStatus.text = "Foto berhasil. Tanda tangan terproteksi enkripsi."
+                    } else {
+                        binding.tvSuccessStatus.text = "Foto berhasil. Tanda tangan: $status"
+                    }
                     binding.tvSuccessStatus.setTextColor(ContextCompat.getColor(this, R.color.text_secondary))
                 }
 

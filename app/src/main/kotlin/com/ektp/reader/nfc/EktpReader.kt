@@ -136,7 +136,6 @@ class EktpReader {
                         val sigSize = ((sigSizeResponse[0].toInt() and 0xFF) shl 8) or (sigSizeResponse[1].toInt() and 0xFF)
                         if (sigSize > 0) {
                             val sigBytes = ByteArray(sigSize)
-                            val initialSigLen = sigSizeResponse.size - 2 // Standard is data + SW
                             // The first 2 bytes are the size prefix, data starts at index 2
                             val dataInResponse = sigSizeResponse.size - 4 // dataLength - 2 (SW) - 2 (size prefix)
                             
@@ -159,18 +158,18 @@ class EktpReader {
                                 sigOffset = nextOffset
                             }
                             signatureBitmap = BitmapFactory.decodeByteArray(sigBytes, 0, sigBytes.size)
-                            signatureStatus = if (signatureBitmap != null) "Berhasil" else "Gagal Decode"
+                            signatureStatus = if (signatureBitmap != null) "Berhasil" else "Format tidak didukung"
                         } else {
-                            signatureStatus = "Ukuran 0"
+                            signatureStatus = "Kosong"
                         }
                     } else {
-                        signatureStatus = "Gagal Baca Ukuran ($sizeSw)"
+                        signatureStatus = if (sizeSw == "6982") "Terkunci (Enkripsi)" else "Akses Ditolak ($sizeSw)"
                     }
                 } else {
                     signatureStatus = when (sw) {
-                        "6982" -> "Akses Ditolak (Locked)"
-                        "6A82" -> "File Tidak Ada"
-                        else -> "Status: $sw"
+                        "6982" -> "Terkunci (Enkripsi)"
+                        "6A82" -> "Tidak tersedia di kartu ini"
+                        else -> "Akses Ditolak ($sw)"
                     }
                 }
             } catch (e: Exception) {
