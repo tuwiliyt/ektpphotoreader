@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ektp.reader.app-mergeDebugResources-34:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/user/.gradle/caches/9.3.0/transforms/c9f6c2e8446a67cd0c1cc087584f2fca/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.ektp.reader.app-debug-36:/drawable_ic_id_card.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/drawable/ic_id_card.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/drawable_card_background.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/drawable/card_background.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/xml_file_paths.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/drawable_ic_nfc.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/drawable/ic_nfc.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/drawable_gradient_background.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/drawable/gradient_background.xml"
+    },
+    {
+        "merged": "com.ektp.reader.app-debug-36:/xml_nfc_tech_filter.xml.flat",
+        "source": "com.ektp.reader.app-main-38:/xml/nfc_tech_filter.xml"
+    }
+]

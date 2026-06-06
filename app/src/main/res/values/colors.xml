@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF1565C0</color>
+    <color name="primary_dark">#FF0D47A1</color>
+    <color name="primary_variant">#FF1976D2</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="secondary">#FF00BCD4</color>
+    <color name="secondary_variant">#FF0097A7</color>
+    <color name="on_secondary">#FF000000</color>
+    <color name="background">#FF121212</color>
+    <color name="surface">#FF1E1E1E</color>
+    <color name="surface_variant">#FF2C2C2C</color>
+    <color name="on_background">#FFFFFFFF</color>
+    <color name="on_surface">#FFFFFFFF</color>
+    <color name="on_surface_variant">#FFB0B0B0</color>
+    <color name="error">#FFCF6679</color>
+    <color name="on_error">#FF000000</color>
+    <color name="success">#FF4CAF50</color>
+    <color name="gradient_start">#FF0D1B2A</color>
+    <color name="gradient_center">#FF1B2838</color>
+    <color name="gradient_end">#FF1A237E</color>
+    <color name="card_stroke">#FF2196F3</color>
+    <color name="text_secondary">#FFB0BEC5</color>
+    <color name="nfc_pulse">#FF00BCD4</color>
+    <color name="divider">#FF333333</color>
+    <color name="status_dot_active">#FF4CAF50</color>
+    <color name="status_dot_inactive">#FFCF6679</color>
+</resources>
