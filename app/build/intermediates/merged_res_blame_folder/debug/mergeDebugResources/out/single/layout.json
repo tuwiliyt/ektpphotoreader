@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/layout/activity_main.xml"
+    },
+    {
         "merged": "com.ektp.reader.app-mergeDebugResources-35:/layout/activity_main.xml",
         "source": "com.ektp.reader.app-main-38:/layout/activity_main.xml"
     }

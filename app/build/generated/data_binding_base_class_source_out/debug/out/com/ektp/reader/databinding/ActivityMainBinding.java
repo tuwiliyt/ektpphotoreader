@@ -43,10 +43,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final MaterialCardView cardMain;
 
   @NonNull
+  public final MaterialCardView cardSignature;
+
+  @NonNull
   public final ImageView ivNfcIcon;
 
   @NonNull
   public final ImageView ivPhoto;
+
+  @NonNull
+  public final ImageView ivSignature;
 
   @NonNull
   public final LinearLayout layoutButtons;
@@ -91,6 +97,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvSubtitle;
 
   @NonNull
+  public final TextView tvSuccessStatus;
+
+  @NonNull
   public final TextView tvTapCard;
 
   @NonNull
@@ -102,15 +111,16 @@ public final class ActivityMainBinding implements ViewBinding {
   private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnEnableNfc,
       @NonNull MaterialButton btnReadAgain, @NonNull MaterialButton btnSave,
       @NonNull MaterialButton btnShare, @NonNull MaterialButton btnTryAgain,
-      @NonNull MaterialCardView cardMain, @NonNull ImageView ivNfcIcon, @NonNull ImageView ivPhoto,
+      @NonNull MaterialCardView cardMain, @NonNull MaterialCardView cardSignature,
+      @NonNull ImageView ivNfcIcon, @NonNull ImageView ivPhoto, @NonNull ImageView ivSignature,
       @NonNull LinearLayout layoutButtons, @NonNull LinearLayout layoutError,
       @NonNull LinearLayout layoutIdle, @NonNull LinearLayout layoutNfcStatus,
       @NonNull LinearLayout layoutNoNfc, @NonNull LinearLayout layoutReading,
       @NonNull LinearLayout layoutSecondaryButtons, @NonNull LinearLayout layoutSuccess,
       @NonNull CircularProgressIndicator progressReading, @NonNull TextView tvErrorMessage,
       @NonNull TextView tvNfcStatus, @NonNull TextView tvNoNfcDesc, @NonNull TextView tvNoNfcTitle,
-      @NonNull TextView tvSubtitle, @NonNull TextView tvTapCard, @NonNull TextView tvTitle,
-      @NonNull View viewNfcDot) {
+      @NonNull TextView tvSubtitle, @NonNull TextView tvSuccessStatus, @NonNull TextView tvTapCard,
+      @NonNull TextView tvTitle, @NonNull View viewNfcDot) {
     this.rootView = rootView;
     this.btnEnableNfc = btnEnableNfc;
     this.btnReadAgain = btnReadAgain;
@@ -118,8 +128,10 @@ public final class ActivityMainBinding implements ViewBinding {
     this.btnShare = btnShare;
     this.btnTryAgain = btnTryAgain;
     this.cardMain = cardMain;
+    this.cardSignature = cardSignature;
     this.ivNfcIcon = ivNfcIcon;
     this.ivPhoto = ivPhoto;
+    this.ivSignature = ivSignature;
     this.layoutButtons = layoutButtons;
     this.layoutError = layoutError;
     this.layoutIdle = layoutIdle;
@@ -134,6 +146,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.tvNoNfcDesc = tvNoNfcDesc;
     this.tvNoNfcTitle = tvNoNfcTitle;
     this.tvSubtitle = tvSubtitle;
+    this.tvSuccessStatus = tvSuccessStatus;
     this.tvTapCard = tvTapCard;
     this.tvTitle = tvTitle;
     this.viewNfcDot = viewNfcDot;
@@ -202,6 +215,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cardSignature;
+      MaterialCardView cardSignature = ViewBindings.findChildViewById(rootView, id);
+      if (cardSignature == null) {
+        break missingId;
+      }
+
       id = R.id.ivNfcIcon;
       ImageView ivNfcIcon = ViewBindings.findChildViewById(rootView, id);
       if (ivNfcIcon == null) {
@@ -211,6 +230,12 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.ivPhoto;
       ImageView ivPhoto = ViewBindings.findChildViewById(rootView, id);
       if (ivPhoto == null) {
+        break missingId;
+      }
+
+      id = R.id.ivSignature;
+      ImageView ivSignature = ViewBindings.findChildViewById(rootView, id);
+      if (ivSignature == null) {
         break missingId;
       }
 
@@ -298,6 +323,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvSuccessStatus;
+      TextView tvSuccessStatus = ViewBindings.findChildViewById(rootView, id);
+      if (tvSuccessStatus == null) {
+        break missingId;
+      }
+
       id = R.id.tvTapCard;
       TextView tvTapCard = ViewBindings.findChildViewById(rootView, id);
       if (tvTapCard == null) {
@@ -317,10 +348,10 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ScrollView) rootView, btnEnableNfc, btnReadAgain, btnSave,
-          btnShare, btnTryAgain, cardMain, ivNfcIcon, ivPhoto, layoutButtons, layoutError,
-          layoutIdle, layoutNfcStatus, layoutNoNfc, layoutReading, layoutSecondaryButtons,
-          layoutSuccess, progressReading, tvErrorMessage, tvNfcStatus, tvNoNfcDesc, tvNoNfcTitle,
-          tvSubtitle, tvTapCard, tvTitle, viewNfcDot);
+          btnShare, btnTryAgain, cardMain, cardSignature, ivNfcIcon, ivPhoto, ivSignature,
+          layoutButtons, layoutError, layoutIdle, layoutNfcStatus, layoutNoNfc, layoutReading,
+          layoutSecondaryButtons, layoutSuccess, progressReading, tvErrorMessage, tvNfcStatus,
+          tvNoNfcDesc, tvNoNfcTitle, tvSubtitle, tvSuccessStatus, tvTapCard, tvTitle, viewNfcDot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

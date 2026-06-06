@@ -7,6 +7,9 @@ object ApduUtils {
     // SELECT Elementary File (EF) Photo
     val SELECT_EF_PHOTO = byteArrayOf(0x00.toByte(), 0xA4.toByte(), 0x00.toByte(), 0x00.toByte(), 0x02.toByte(), 0x6F.toByte(), 0xF2.toByte())
 
+    // SELECT Elementary File (EF) Signature
+    val SELECT_EF_SIGNATURE = byteArrayOf(0x00.toByte(), 0xA4.toByte(), 0x00.toByte(), 0x00.toByte(), 0x02.toByte(), 0x6F.toByte(), 0xF3.toByte())
+
     /**
      * Converts a hex string to a byte array.
      */

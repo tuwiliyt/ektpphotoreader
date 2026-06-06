@@ -10,7 +10,7 @@ import java.io.IOException
 class EktpReader {
 
     sealed class ReadResult {
-        data class Success(val photo: Bitmap) : ReadResult()
+        data class Success(val photo: Bitmap, val signature: Bitmap? = null) : ReadResult()
         data class Error(val message: String) : ReadResult()
         object Reading : ReadResult()
     }
@@ -94,12 +94,48 @@ class EktpReader {
             }
 
             // Decode photo bytes to Bitmap
-            val bitmap = BitmapFactory.decodeByteArray(photoBytes, 0, photoBytes.size)
-            if (bitmap != null) {
-                ReadResult.Success(bitmap)
-            } else {
-                ReadResult.Error("Gagal men-decode foto e-KTP")
+            val photoBitmap = BitmapFactory.decodeByteArray(photoBytes, 0, photoBytes.size)
+            if (photoBitmap == null) {
+                return@withContext ReadResult.Error("Gagal men-decode foto e-KTP")
             }
+
+            // 4. Try to read Signature (Optional)
+            var signatureBitmap: Bitmap? = null
+            try {
+                val selectSigResponse = isoDep.transceive(ApduUtils.SELECT_EF_SIGNATURE)
+                if (ApduUtils.isSuccessResponse(selectSigResponse)) {
+                    val sigSizeCommand = ApduUtils.buildReadBinaryCommand(0, 8)
+                    val sigSizeResponse = isoDep.transceive(sigSizeCommand)
+                    
+                    if (ApduUtils.isSuccessResponse(sigSizeResponse)) {
+                        val sigSize = ((sigSizeResponse[0].toInt() and 0xFF) shl 8) or (sigSizeResponse[1].toInt() and 0xFF)
+                        if (sigSize > 0) {
+                            val sigBytes = ByteArray(sigSize)
+                            val initialSigLen = sigSizeResponse.size - 4
+                            if (initialSigLen > 0) {
+                                System.arraycopy(sigSizeResponse, 2, sigBytes, 0, initialSigLen)
+                            }
+
+                            var sigOffset = 8
+                            while (sigOffset < sigSize) {
+                                val nextOffset = sigOffset + 112
+                                val len = if (nextOffset > sigSize) (sigSize - sigOffset) + 2 else 112
+                                val cmd = ApduUtils.buildReadBinaryCommand(sigOffset, len)
+                                val resp = isoDep.transceive(cmd)
+                                if (!ApduUtils.isSuccessResponse(resp)) break
+                                System.arraycopy(resp, 0, sigBytes, sigOffset - 2, resp.size - 2)
+                                sigOffset = nextOffset
+                            }
+                            signatureBitmap = BitmapFactory.decodeByteArray(sigBytes, 0, sigBytes.size)
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                // If signature fails, we still return the photo
+                e.printStackTrace()
+            }
+
+            ReadResult.Success(photoBitmap, signatureBitmap)
 
         } catch (e: IOException) {
             ReadResult.Error("Koneksi NFC terputus: ${e.localizedMessage}")

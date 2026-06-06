@@ -35,8 +35,10 @@ id btnSave
 id btnShare
 id btnTryAgain
 id cardMain
+id cardSignature
 id ivNfcIcon
 id ivPhoto
+id ivSignature
 id layoutButtons
 id layoutError
 id layoutIdle
@@ -51,6 +53,7 @@ id tvNfcStatus
 id tvNoNfcDesc
 id tvNoNfcTitle
 id tvSubtitle
+id tvSuccessStatus
 id tvTapCard
 id tvTitle
 id viewNfcDot

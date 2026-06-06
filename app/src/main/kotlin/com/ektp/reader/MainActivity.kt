@@ -233,6 +233,16 @@ class MainActivity : AppCompatActivity() {
             is EktpReader.ReadResult.Success -> {
                 lastReadPhoto = result.photo
                 binding.ivPhoto.setImageBitmap(result.photo)
+                
+                if (result.signature != null) {
+                    binding.ivSignature.setImageBitmap(result.signature)
+                    binding.cardSignature.visibility = View.VISIBLE
+                    binding.tvSuccessStatus.text = "Foto & Tanda Tangan Berhasil Dimuat"
+                } else {
+                    binding.cardSignature.visibility = View.GONE
+                    binding.tvSuccessStatus.text = getString(R.string.photo_loaded)
+                }
+
                 vibrateDeviceSuccess()
                 showState(UIState.SUCCESS)
             }

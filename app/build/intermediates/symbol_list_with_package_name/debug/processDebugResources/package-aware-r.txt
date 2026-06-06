@@ -3211,6 +3211,7 @@ id cache_measures
 id callMeasure
 id cancel_button
 id cardMain
+id cardSignature
 id carryVelocity
 id center
 id centerCrop
@@ -3339,6 +3340,7 @@ id italic
 id item_touch_helper_previous_elevation
 id ivNfcIcon
 id ivPhoto
+id ivSignature
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3598,6 +3600,7 @@ id tvNfcStatus
 id tvNoNfcDesc
 id tvNoNfcTitle
 id tvSubtitle
+id tvSuccessStatus
 id tvTapCard
 id tvTitle
 id unchecked
