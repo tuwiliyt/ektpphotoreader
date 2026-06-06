@@ -128,13 +128,20 @@ class EktpReader {
                     val sigSizeCommand = ApduUtils.buildReadBinaryCommand(0, 8)
                     val sigSizeResponse = isoDep.transceive(sigSizeCommand)
                     
+                    val sizeSw = if (sigSizeResponse.size >= 2) {
+                        String.format("%02X%02X", sigSizeResponse[sigSizeResponse.size - 2], sigSizeResponse[sigSizeResponse.size - 1])
+                    } else "Unknown"
+
                     if (ApduUtils.isSuccessResponse(sigSizeResponse)) {
                         val sigSize = ((sigSizeResponse[0].toInt() and 0xFF) shl 8) or (sigSizeResponse[1].toInt() and 0xFF)
                         if (sigSize > 0) {
                             val sigBytes = ByteArray(sigSize)
-                            val initialSigLen = sigSizeResponse.size - 4
-                            if (initialSigLen > 0) {
-                                System.arraycopy(sigSizeResponse, 2, sigBytes, 0, Math.min(initialSigLen, sigSize))
+                            val initialSigLen = sigSizeResponse.size - 2 // Standard is data + SW
+                            // The first 2 bytes are the size prefix, data starts at index 2
+                            val dataInResponse = sigSizeResponse.size - 4 // dataLength - 2 (SW) - 2 (size prefix)
+                            
+                            if (dataInResponse > 0) {
+                                System.arraycopy(sigSizeResponse, 2, sigBytes, 0, Math.min(dataInResponse, sigSize))
                             }
 
                             var sigOffset = 8
@@ -144,16 +151,20 @@ class EktpReader {
                                 val cmd = ApduUtils.buildReadBinaryCommand(sigOffset, len)
                                 val resp = isoDep.transceive(cmd)
                                 if (!ApduUtils.isSuccessResponse(resp)) break
-                                System.arraycopy(resp, 0, sigBytes, sigOffset - 2, Math.min(resp.size - 2, sigSize - (sigOffset - 2)))
+                                
+                                val targetIndex = sigOffset - 2
+                                val bytesToCopy = resp.size - 2
+                                System.arraycopy(resp, 0, sigBytes, targetIndex, Math.min(bytesToCopy, sigSize - targetIndex))
+                                
                                 sigOffset = nextOffset
                             }
                             signatureBitmap = BitmapFactory.decodeByteArray(sigBytes, 0, sigBytes.size)
-                            signatureStatus = if (signatureBitmap != null) "Berhasil" else "Gagal decode"
+                            signatureStatus = if (signatureBitmap != null) "Berhasil" else "Gagal Decode"
                         } else {
                             signatureStatus = "Ukuran 0"
                         }
                     } else {
-                        signatureStatus = "Gagal baca ukuran"
+                        signatureStatus = "Gagal Baca Ukuran ($sizeSw)"
                     }
                 } else {
                     signatureStatus = when (sw) {
