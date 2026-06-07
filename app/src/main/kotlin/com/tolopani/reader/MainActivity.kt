@@ -26,8 +26,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.LinearInterpolator
-import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -69,7 +69,23 @@ class MainActivity : AppCompatActivity() {
 
         setupUI()
         setupNfcPendingIntent()
+        setupBackPressConfirmation()
         startPulseAnimation()
+    }
+
+    private fun setupBackPressConfirmation() {
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                AlertDialog.Builder(this@MainActivity)
+                    .setTitle("Keluar Aplikasi")
+                    .setMessage("Apakah Anda yakin ingin keluar dari aplikasi?")
+                    .setPositiveButton("Ya") { _, _ ->
+                        finish()
+                    }
+                    .setNegativeButton("Tidak", null)
+                    .show()
+            }
+        })
     }
 
     override fun onResume() {
