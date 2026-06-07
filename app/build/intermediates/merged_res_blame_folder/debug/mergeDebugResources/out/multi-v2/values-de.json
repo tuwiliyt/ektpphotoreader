@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ektp.reader.app-mergeDebugResources-34:/values-de/values-de.xml",
+            "outputFile": "com.tolopani.reader.app-mergeDebugResources-34:/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/user/.gradle/caches/9.3.0/transforms/fe04ec05cd98eee0b555d4a8a8030174/transformed/material-1.11.0/res/values-de/values-de.xml",

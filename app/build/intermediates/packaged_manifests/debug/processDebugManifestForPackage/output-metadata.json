@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.ektp.reader",
+  "applicationId": "com.tolopani.reader",
   "variantName": "debug",
   "elements": [
     {

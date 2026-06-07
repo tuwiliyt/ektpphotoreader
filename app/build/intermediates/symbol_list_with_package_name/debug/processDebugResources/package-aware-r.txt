@@ -1,4 +1,4 @@
-com.ektp.reader
+com.tolopani.reader
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -3019,6 +3019,7 @@ drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_id_card
 drawable ic_keyboard_black_24dp
+drawable ic_launcher_background
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3387,6 +3388,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id menu_about
 id message
 id middle
 id mini
@@ -3584,6 +3586,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3596,6 +3599,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvErrorMessage
+id tvFooter
 id tvNfcStatus
 id tvNoNfcDesc
 id tvNoNfcTitle
@@ -3821,7 +3825,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu main_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -3851,6 +3857,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_description
+string about_developer
+string about_privacy_desc
+string about_privacy_title
+string about_title
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3887,6 +3898,7 @@ string error_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string footer_text
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3928,6 +3940,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_about
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3996,11 +4009,14 @@ string nfc_not_available
 string nfc_not_available_desc
 string nfc_status_off
 string nfc_status_on
+string ok
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_denied_storage
+string photo_and_signature_loaded
 string photo_loaded
 string photo_save_failed
 string photo_saved
@@ -4012,10 +4028,20 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string share_chooser_title
+string share_error
 string share_photo
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string signature_label
 string status_bar_notification_info_overflow
+string status_signature_denied
+string status_signature_empty
+string status_signature_format_not_supported
+string status_signature_locked
+string status_signature_not_available
+string status_signature_not_found
+string status_signature_protected
 string subtitle
 string tap_card
 string tap_card_desc
@@ -5294,5 +5320,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml backup_rules
+xml data_extraction_rules
 xml file_paths
 xml nfc_tech_filter

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ektp.reader"
+    package="com.tolopani.reader"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -20,16 +20,18 @@
         android:maxSdkVersion="28" />
 
     <permission
-        android:name="com.ektp.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.tolopani.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.ektp.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.tolopani.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -37,7 +39,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.EktpReader" >
         <activity
-            android:name="com.ektp.reader.MainActivity"
+            android:name="com.tolopani.reader.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >
@@ -64,7 +66,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.ektp.reader.fileprovider"
+            android:authorities="com.tolopani.reader.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -73,7 +75,7 @@
         </provider>
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.ektp.reader.androidx-startup"
+            android:authorities="com.tolopani.reader.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

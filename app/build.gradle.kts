@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ektp.reader"
+    namespace = "com.tolopani.reader"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ektp.reader"
+        applicationId = "com.tolopani.reader"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

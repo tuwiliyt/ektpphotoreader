@@ -1,42 +1,118 @@
 [
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/xml_file_paths.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/xml/file_paths.xml"
     },
     {
-        "merged": "com.ektp.reader.app-debug-36:/layout_activity_main.xml.flat",
-        "source": "com.ektp.reader.app-main-38:/layout/activity_main.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/drawable_card_background.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/drawable/card_background.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/xml_nfc_tech_filter.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/xml/nfc_tech_filter.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/xml_file_paths.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/xml/file_paths.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/drawable_card_background.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/drawable/card_background.xml"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/layout_activity_main.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/layout/activity_main.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/drawable_ic_nfc.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/drawable/ic_nfc.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/drawable_ic_id_card.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/drawable/ic_id_card.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/drawable_ic_id_card.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/drawable/ic_id_card.xml"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/drawable_gradient_background.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/drawable/gradient_background.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/user/.gradle/daemon/9.3.0/com.ektp.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/drawable_gradient_background.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/drawable/gradient_background.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.tolopani.reader.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.tolopani.reader.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/xml_backup_rules.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/xml_nfc_tech_filter.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/xml/nfc_tech_filter.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/drawable_ic_nfc.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/drawable/ic_nfc.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/menu_main_menu.xml.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/menu/main_menu.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-debug-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/user/.gradle/daemon/9.3.0/com.tolopani.reader.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
     }
 ]

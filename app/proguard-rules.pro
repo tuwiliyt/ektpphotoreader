@@ -4,7 +4,7 @@
 -keep class android.nfc.** { *; }
 
 # Keep the app's model classes
--keep class com.ektp.reader.nfc.** { *; }
+-keep class com.tolopani.reader.nfc.** { *; }
 
 # Keep ViewBinding classes
--keep class com.ektp.reader.databinding.** { *; }
+-keep class com.tolopani.reader.databinding.** { *; }

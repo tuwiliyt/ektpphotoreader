@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-47:12
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:2:1-49:12
 MERGED from [androidx.databinding:viewbinding:8.3.2] /Users/user/.gradle/caches/9.3.0/transforms/e84d0608128dbae38132e64513567b26/transformed/viewbinding-8.3.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/user/.gradle/caches/9.3.0/transforms/fe04ec05cd98eee0b555d4a8a8030174/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/user/.gradle/caches/9.3.0/transforms/94b72ff2836a84d8acf5acc890432243/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -80,8 +80,8 @@ ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidMani
 	android:name
 		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:6:22-78
 application
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:8:5-46:19
-INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:8:5-46:19
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:8:5-48:19
+INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:8:5-48:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/user/.gradle/caches/9.3.0/transforms/fe04ec05cd98eee0b555d4a8a8030174/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/user/.gradle/caches/9.3.0/transforms/fe04ec05cd98eee0b555d4a8a8030174/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/user/.gradle/caches/9.3.0/transforms/94b72ff2836a84d8acf5acc890432243/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -103,75 +103,79 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/user/.gradle/caches/
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:13:9-41
+	android:fullBackupContent
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:11:9-54
 	android:roundIcon
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:12:9-43
 	android:allowBackup
 		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:9:9-36
 	android:theme
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:14:9-48
-activity#com.ektp.reader.MainActivity
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:15:9-35:20
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:16:9-48
+	android:dataExtractionRules
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:10:9-65
+activity#com.tolopani.reader.MainActivity
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:17:9-37:20
 	android:screenOrientation
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:19:13-49
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:21:13-49
 	android:launchMode
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:18:13-43
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:20:13-43
 	android:exported
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:17:13-36
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:18:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:20:13-23:29
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:22:13-25:29
 action#android.intent.action.MAIN
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:24:27-74
 intent-filter#action:name:android.nfc.action.TAG_DISCOVERED+category:name:android.intent.category.DEFAULT
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:24:13-27:29
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:26:13-29:29
 action#android.nfc.action.TAG_DISCOVERED
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:25:17-76
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:27:17-76
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:25:25-73
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:27:25-73
 category#android.intent.category.DEFAULT
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:26:17-76
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:28:17-76
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:26:27-73
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:28:27-73
 intent-filter#action:name:android.nfc.action.TECH_DISCOVERED+category:name:android.intent.category.DEFAULT
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:28:13-31:29
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:30:13-33:29
 action#android.nfc.action.TECH_DISCOVERED
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:29:17-77
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:29:25-74
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:31:25-74
 meta-data#android.nfc.action.TECH_DISCOVERED
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:32:13-34:59
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:34:13-36:59
 	android:resource
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:34:17-56
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:36:17-56
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:33:17-66
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:35:17-66
 provider#androidx.core.content.FileProvider
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:37:9-45:20
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:39:9-47:20
 	android:grantUriPermissions
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:41:13-47
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:43:13-47
 	android:authorities
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:39:13-63
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:41:13-67
 	android:exported
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:40:13-37
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:38:13-62
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:40:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:42:13-44:54
+ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:44:13-46:54
 	android:resource
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:44:17-51
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:46:17-51
 	android:name
-		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:43:17-67
+		ADDED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml:45:17-67
 uses-sdk
 INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/user/AndroidStudioProjects/EktpReader/app/src/main/AndroidManifest.xml
@@ -302,7 +306,7 @@ ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transfor
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-permission#com.ektp.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.tolopani.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
@@ -312,7 +316,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-uses-permission#com.ektp.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.tolopani.reader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/user/.gradle/caches/9.3.0/transforms/f33e493d0ef43b05dcd0bc84d4eac781/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
